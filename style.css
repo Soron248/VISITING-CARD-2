@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(BG.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.card{ 
+    width: 300px;
+    height: 500px;
+    background-color: rgba(255,255,255,0.1);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    backdrop-filter: blur(4px);
+    border-radius: 15px;
+    box-shadow: 20px 20px 22px rgba(0,0,0,0.4);
+
+    animation-name: crd;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+
+}
+.card:hover{
+    animation-iteration-count: unset;
+}
+@keyframes crd{
+    0%{
+        top: 55%;
+    }
+    50%{
+        top: 45%;
+        width: 320px;
+        height: 520px;
+        box-shadow: 25px 25px 28px rgba(0,0,0,0.4);
+    }
+    100%{
+        top: 55%;
+    }
+}
+.p1{
+    height: 175px;
+    width: 175px;
+
+    border-radius: 50%;
+    margin: 30px auto;
+
+    border: 15px solid  rgba(255,255,255,0.2);
+    backdrop-filter: blur(1px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.p{
+    background-image: url(srn.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+
+
+}
+h1,h2,h3,h4{
+    font-size: 22px;
+    padding: 0 10px;
+    text-align: center;
+    color: rgba(255,255,255,0.6);
+}
+h2{
+    font-size: 18px;
+}
+h2 i{
+    color: black;
+}
+h3{
+    font-size: 15px;
+}
+h4{
+    margin: 0 auto;
+    width: 150px;
+    font-size: 15px;
+    border-bottom: 1px solid black;
+}
+h5{
+    margin: 15px auto;
+    width: 300px;
+    font-size: 14px;
+    padding: 0 10px;
+    text-align: center;
+    color: black;
+}
+.c{
+    width: 300px;
+    font-size: 22px;
+    text-align: center;
+    margin: 5px auto;
+}
+.c a{
+    padding: 15px;
+    color: black;
+}
+.c a i:hover{
+    animation-name: fnt;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes fnt{
+    to{
+        transform: rotate(360deg);
+        font-size: 35px;
+    }
+    from{
+        transform: rotate(0deg);
+    }
+}
+@media screen and (max-width: 600px){
+    body{
+        background-image: url(BGP.png);
+    }
+}
